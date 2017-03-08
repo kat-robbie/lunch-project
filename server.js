@@ -21,3 +21,5 @@ server.use(bodyParser.urlencoded({ extended: true }))
 
 server.get('/', index.get)
 server.get('/submitlunch', index.showForm)
+
+server.post('/submitlunch', index.showLunchOptions)
