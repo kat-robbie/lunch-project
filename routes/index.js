@@ -3,7 +3,8 @@ var express = require('express')
 var db = require('../db')
 
 module.exports = {
-  get: get
+  get: get,
+  showForm: showForm
 }
 
 function get (req, res) {
@@ -14,4 +15,8 @@ function get (req, res) {
     .catch(function (err) {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
+}
+
+function showForm (req, res) {
+  res.render('submitlunch.hbs')
 }
