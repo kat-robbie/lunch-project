@@ -27,12 +27,18 @@
   "devDependencies": {
     "ava": "^0.18.0",
     "nodemon": "^1.11.0",
-    "sqlite3": "^3.1.8"
+    "sqlite3": "^3.1.8",
+    "tap-diff": "^0.1.1",
+    "tape": "^4.6.3"
   },
   "dependencies": {
     "body-parser": "^1.16.0",
     "express": "^4.14.1",
     "express-handlebars": "^3.0.0",
-    "knex": "^0.12.6"
+    "knex": "^0.12.7",
+    "sqlite3": "^3.1.8"
+  },
+  "directories": {
+    "test": "tests"
   }
 }
