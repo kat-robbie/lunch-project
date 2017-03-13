@@ -4,7 +4,8 @@ var db = require('../db')
 
 module.exports = {
   get: get,
-  showForm: showForm
+  showForm: showForm,
+  showLunch: showLunch
 }
 
 function get (req, res) {
@@ -19,4 +20,8 @@ function get (req, res) {
 
 function showForm (req, res) {
   res.render('submitlunch.hbs')
+}
+
+function showLunch (req, res) {
+  res.render('lunch.hbs')
 }
