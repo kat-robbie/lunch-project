@@ -19,6 +19,6 @@ server.use(bodyParser.urlencoded({ extended: true }))
 
 // Routes
 
-server.get('/', index.get)
+server.get('/home', index.getHome)
 server.get('/submitlunch', index.showForm)
 server.get('/lunch', index.showLunch)

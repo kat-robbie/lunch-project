@@ -3,19 +3,13 @@ var express = require('express')
 var db = require('../db')
 
 module.exports = {
-  get: get,
+  getHome: getHome,
   showForm: showForm,
   showLunch: showLunch
 }
 
-function get (req, res) {
-  db.getUsers()
-    .then(function (users) {
-      res.render('index', { users: users })
-    })
-    .catch(function (err) {
-      res.status(500).send('DATABASE ERROR: ' + err.message)
-    })
+function getHome (req, res) {
+  res.render('home.hbs')
 }
 
 function showForm (req, res) {
@@ -25,3 +19,14 @@ function showForm (req, res) {
 function showLunch (req, res) {
   res.render('lunch.hbs')
 }
+
+
+// function get (req, res) {
+//   db.getUsers()
+//     .then(function (users) {
+//       res.render('index', { users: users })
+//     })
+//     .catch(function (err) {
+//       res.status(500).send('DATABASE ERROR: ' + err.message)
+//     })
+// }
