@@ -21,8 +21,9 @@ function showForm (req, res) {
 
 function saveForm (req, res) {
   db.saveForm(req.body)
-  .then(function () {
-    res.redirect('/lunch')
+  .then(function (result) {
+    console.log(result);
+    res.redirect('/lunch/' + result[0])
   })
 }
 

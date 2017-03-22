@@ -10,6 +10,8 @@ var server = express()
 
 module.exports = server
 
+server.use(express.static('./styles'))
+
 // Middleware
 
 server.engine('hbs', hbs({extname: 'hbs'}))
