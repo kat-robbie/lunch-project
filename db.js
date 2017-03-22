@@ -3,10 +3,23 @@ var config = require('./knexfile')[environment]
 var connection = require('knex')(config)
 
 module.exports = {
-  showLunch: showLunch
+  saveForm: saveForm,
+  getLunch: getLunch,
+  getIndividual: getIndividual
 }
 
-function showLunch (testDb) {
+function saveForm (lunch_details, testDb) {
+  var db = testDb || connection
+  return db ('lunch').insert(lunch_details)
+}
+
+
+function getLunch (testDb) {
   var db = testDb || connection
   return db('lunch').select()
+}
+
+function getIndividual (id, testDb) {
+  var db = testDb || connection
+  return db('lunch').where('id', id)
 }
