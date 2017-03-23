@@ -5,7 +5,8 @@ var connection = require('knex')(config)
 module.exports = {
   saveForm: saveForm,
   getLunch: getLunch,
-  getIndividual: getIndividual
+  getIndividual: getIndividual,
+  budgetFilter: budgetFilter
 }
 
 function saveForm (lunch_details, testDb) {
@@ -22,4 +23,9 @@ function getLunch (testDb) {
 function getIndividual (id, testDb) {
   var db = testDb || connection
   return db('lunch').where('id', id)
+}
+
+function budgetFilter (cost, testDb) {
+  var db = testDb || connection
+  return db('lunch').insert(cost)
 }

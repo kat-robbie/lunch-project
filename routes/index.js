@@ -7,7 +7,9 @@ module.exports = {
   showForm: showForm,
   saveForm: saveForm,
   getLunch: getLunch,
-  getIndividual: getIndividual
+  getIndividual: getIndividual,
+  budgetFilter: budgetFilter
+
 }
 
 function getHome (req, res) {
@@ -45,4 +47,8 @@ function getIndividual (req, res) {
     .catch(function (err) {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
+}
+
+function budgetFilter (req, res) {
+  res.render('money.hbs')
 }
