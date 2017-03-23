@@ -6,7 +6,6 @@ module.exports = {
   getHome: getHome,
   showForm: showForm,
   saveForm: saveForm,
-  showLunch: showLunch,
   getLunch: getLunch,
   getIndividual: getIndividual
 }
@@ -27,13 +26,9 @@ function saveForm (req, res) {
   })
 }
 
-function showLunch (req, res) {
-  res.render('lunch.hbs')
-}
-
 function getLunch (req, res) {
   db.getLunch()
-    .then(function (cohort) {
+    .then(function (lunch) {
       res.render('lunch.hbs', { lunch: lunch })
     })
     .catch(function (err) {
