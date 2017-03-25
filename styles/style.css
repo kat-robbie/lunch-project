@@ -2,20 +2,39 @@ body {
     background: url("http://content.mycutegraphics.com/backgrounds/food/toast-background.gif");
 }
 
-article {
+header {
     background-color: #FAE6D0;
     color: #421A09;
-    font-weight: bold;
-    padding: 5px;
+    padding: 0px;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     margin-right: 200px;
     margin-left: 200px;
     border-color: #C6A073;
     border-style: solid;
     border-width: 5px;
     border-radius: 10px;
+    font-family: 'Finger Paint';
+    font-size: 18px;
+}
+
+article {
+    background-color: #FAE6D0;
+    color: #421A09;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 200px;
+    margin-left: 200px;
+    border-color: #C6A073;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    font-family: 'Annie Use Your Telescope';
+    font-size: 18px;
 }
 
 footer {
@@ -27,10 +46,12 @@ footer {
     padding: 5px;
     margin-top: 30px;
     margin-bottom: 30px;
-    margin-right: 450px;
-    margin-left: 450px;
+    margin-right: 400px;
+    margin-left: 400px;
     border-color: #C6A073;
     border-style: solid;
     border-width: 5px;
     border-radius: 10px;
+    font-family: 'Annie Use Your Telescope';
+    font-size: 22px;
 }
