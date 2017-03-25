@@ -5,12 +5,17 @@
     <link rel="stylesheet" type="text/css" href="/style.css">
   </head>
   <body>
+    <article>
     <h1>Budget filter</h1>
     <h2> How much do you want to spend today? </h2>
+
     <form action = '/money' method = 'post'>
-      Select an amount in whole dollars (between $1 and $30)<br>
+     <p>Select an amount in whole dollars (between $2 and $30)<br><br>
       $<input type="number" name="quantity" min="1" max="30">
+      <br><br>
       <input type="submit">
+     </p>
+    </article>
   </body>
   <footer>
     Take me <a href="/home">home</a>

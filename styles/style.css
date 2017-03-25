@@ -1,4 +1,36 @@
 body {
-  background-color: #aca2bc;
-  text-align: center;
+    background: url("http://content.mycutegraphics.com/backgrounds/food/toast-background.gif");
+}
+
+article {
+    background-color: #FAE6D0;
+    color: #421A09;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 200px;
+    margin-left: 200px;
+    border-color: #C6A073;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #FAE6D0;
+    color: #421A09;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 450px;
+    margin-left: 450px;
+    border-color: #C6A073;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
 }
