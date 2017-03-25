@@ -5,11 +5,13 @@
     <link rel="stylesheet" type="text/css" href="/style.css">
   </head>
   <body>
-   <h1> Lunch submit results </h1>
+   <h1> List of lunches that we've liked </h1>
 
-    {{#each lunch}} 
-    <p>{{food}}</p>
+    {{#each lunch}}
+    <a href='/lunch/{{id}}' >{{food}}</a><br>
     {{/each}}
-
   </body>
+  <footer>
+    Take me <a href="/home">home</a>
+  </footer>
 </html>

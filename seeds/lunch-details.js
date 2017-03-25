@@ -5,9 +5,9 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('lunch').insert([
-        {id: 1, food: 'chicken', cost: 5, rating: 'good', location: 'Dixon St'},
-        {id: 2, food: 'fish burger', cost: 6, rating: 'bad', location: 'Top of Cuba'},
-        {id: 3, food: 'taco', cost: 9, rating: 'average', location: 'Ghuznee St'}
+        {id: 1, food: 'Vege Mee Goreng (fried noodles)', cost: 9, rating: 'delicious', location: 'Satay Kingdom, Cuba St Left Bank '},
+        {id: 2, food: 'Fish Burger', cost: 6, rating: 'excellent value for money', location: 'Wellington Seamarket, Cuba St'},
+        {id: 3, food: 'Pork Bun', cost: 3, rating: 'average quality of bun', location: 'Rams Crazy Dumpling Restaurant, Cuba St'}
       ]);
     });
 };
