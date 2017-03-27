@@ -55,3 +55,7 @@ footer {
     font-family: 'Annie Use Your Telescope';
     font-size: 22px;
 }
+
+#pageContainer {
+  text-align: center;
+}
