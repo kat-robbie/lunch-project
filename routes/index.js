@@ -8,8 +8,8 @@ module.exports = {
   saveForm: saveForm,
   getLunch: getLunch,
   getIndividual: getIndividual,
-  budgetFilter: budgetFilter
-
+  budgetFilter: budgetFilter,
+  budgetOptions: budgetOptions
 }
 
 function getHome (req, res) {
@@ -51,3 +51,14 @@ function getIndividual (req, res) {
 function budgetFilter (req, res) {
   res.render('money.hbs')
 }
+
+function budgetOptions (req, res) {
+  res.render('filteredcost.hbs')
+}
+
+// .filter(function(type){
+//        return type.abv > '5'
+//        })
+//        .map(function(type){
+//        return (
+//        {type.name}

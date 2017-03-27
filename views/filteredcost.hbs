@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Filtered Price Options</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link href='//fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+
+    <h1> Here's a list of food that would suit your budget of {{cost}} </h1>
+    {{#each lunch}}
+    <a href='/lunch/{{id}}' >{{food}}</a><br>
+    {{/each}}
+
+  </body>
+  <footer>
+    Take me <a href="/home">home</a>
+  </footer>
+</html>
