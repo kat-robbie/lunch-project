@@ -53,7 +53,11 @@ function budgetFilter (req, res) {
 }
 
 function budgetOptions (req, res) {
-  res.render('filteredcost.hbs')
+  db.budgetOptions(req.body)
+  .then(function(result) {
+    res.redirect('/money/' + result[0])
+  })
+
 }
 
 // .filter(function(type){

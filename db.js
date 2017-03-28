@@ -29,3 +29,8 @@ function budgetFilter (cost, testDb) {
   var db = testDb || connection
   return db('lunch').insert(cost)
 }
+
+function budgetOptions (cost, testDb) {
+  var db = test || connection
+  return db('money').insert(cost)
+}
