@@ -53,16 +53,29 @@ function budgetFilter (req, res) {
 }
 
 function budgetOptions (req, res) {
-  db.budgetOptions(req.body)
-  .then(function(result) {
-    res.redirect('/money/' + result[0])
-  })
-
+  db.budgetOptions()
+    .select()
+    .then(function (result) {
+      res.render('filteredcost', result[0])
+    })
+    .catch(function (err) {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
 }
-
-// .filter(function(type){
-//        return type.abv > '5'
+// 
+//
+// var lunchBudget =
+// result.filter(function(cost){
+//        return cost > {input}
 //        })
-//        .map(function(type){
-//        return (
-//        {type.name}
+//        .map(function(lunch){
+//        return
+//        {lunch.cost}
+//
+//        var names = users
+// .filter(function(user){
+//   return user.age > 18
+// })
+// .map(function(user){
+//   return user.name
+// })

@@ -6,7 +6,8 @@ module.exports = {
   saveForm: saveForm,
   getLunch: getLunch,
   getIndividual: getIndividual,
-  budgetFilter: budgetFilter
+  budgetFilter: budgetFilter,
+  budgetOptions: budgetOptions
 }
 
 function saveForm (lunch_details, testDb) {
@@ -31,6 +32,6 @@ function budgetFilter (cost, testDb) {
 }
 
 function budgetOptions (cost, testDb) {
-  var db = test || connection
-  return db('money').insert(cost)
+  var db = testDb || connection
+  return db('lunch').select(cost)
 }
