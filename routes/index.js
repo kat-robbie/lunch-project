@@ -56,7 +56,6 @@ function budgetOptions (req, res) {
   var budget = Number(req.body.budget)
   db.budgetOptions(budget)
     .then(function (result) {
-      console.log(result)
       var data = {
         budget: budget,
         results: result
@@ -67,13 +66,3 @@ function budgetOptions (req, res) {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
 }
-//
-//
-// var lunchBudget =
-// result.filter(function(cost){
-//        return cost > {input}
-//        })
-//        .map(function(lunch){
-//        return
-//        {lunch.cost}
-//
