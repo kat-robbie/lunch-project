@@ -56,13 +56,14 @@ function budgetOptions (req, res) {
   db.budgetOptions()
     .select()
     .then(function (result) {
+      console.log(result);
       res.render('filteredcost', result[0])
     })
     .catch(function (err) {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
 }
-// 
+//
 //
 // var lunchBudget =
 // result.filter(function(cost){
@@ -72,10 +73,3 @@ function budgetOptions (req, res) {
 //        return
 //        {lunch.cost}
 //
-//        var names = users
-// .filter(function(user){
-//   return user.age > 18
-// })
-// .map(function(user){
-//   return user.name
-// })
