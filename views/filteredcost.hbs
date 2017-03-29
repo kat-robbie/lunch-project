@@ -8,13 +8,11 @@
   </head>
   <body>
     <article>
-      <h1>Here's a list of food that would suit your budget of {{budget}} </h1>
-   </article>
-
-{{#each results}}
-<li>{{food}}</li>
-{{/each}}
-
+      <h1>Here's a list of food that would suit your budget of ${{budget}} </h1>
+        {{#each results}}
+        <a href='/lunch/{{id}}' >{{food}}</a><br>
+        {{/each}}
+    </article>
   </body>
   <footer>
     Take me <a href="/home">home</a>
