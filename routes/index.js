@@ -53,11 +53,15 @@ function budgetFilter (req, res) {
 }
 
 function budgetOptions (req, res) {
-  db.budgetOptions()
-    .select()
+  var budget = Number(req.body.budget)
+  db.budgetOptions(budget)
     .then(function (result) {
-      console.log(result);
-      res.render('filteredcost', result[0])
+      console.log(result)
+      var data = {
+        budget: budget,
+        results: result
+      }
+      res.render('filteredcost', data)
     })
     .catch(function (err) {
       res.status(500).send('DATABASE ERROR: ' + err.message)

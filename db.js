@@ -31,7 +31,7 @@ function budgetFilter (cost, testDb) {
   return db('lunch').insert(cost)
 }
 
-function budgetOptions (cost, testDb) {
+function budgetOptions (budget, testDb) {
   var db = testDb || connection
-  return db('lunch').select(cost)
+  return db('lunch').where('cost', '<', budget)
 }
