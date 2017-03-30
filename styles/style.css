@@ -96,3 +96,7 @@ input {
     padding: 5px;
     border-radius: 10px;
 }
+
+img {
+    border-radius: 20px;
+}
